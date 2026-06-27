@@ -1,1 +1,82 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased transition-colors duration-300;
+  }
+
+  .dark body {
+    @apply bg-gray-950 text-gray-100;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .prose-article h2 {
+    @apply text-2xl font-serif font-bold text-ink dark:text-gray-100 mt-10 mb-4 leading-snug;
+    scroll-margin-top: 5rem;
+  }
+
+  .prose-article h3 {
+    @apply text-xl font-serif font-semibold text-ink dark:text-gray-100 mt-8 mb-3 leading-snug;
+    scroll-margin-top: 5rem;
+  }
+
+  .prose-article p {
+    @apply text-base leading-relaxed text-gray-700 dark:text-gray-300 mb-5;
+  }
+
+  .prose-article ul {
+    @apply list-disc pl-6 mb-5 space-y-1;
+  }
+
+  .prose-article li {
+    @apply text-gray-700 dark:text-gray-300 leading-relaxed;
+  }
+
+  .prose-article blockquote {
+    @apply border-l-4 border-accent pl-5 my-6 italic text-muted dark:text-gray-400;
+  }
+
+  .prose-article pre {
+    @apply bg-gray-900 dark:bg-gray-800 text-gray-100 rounded-lg p-5 overflow-x-auto my-6 text-sm font-mono leading-relaxed;
+  }
+
+  .prose-article code:not(pre code) {
+    @apply bg-gray-100 dark:bg-gray-800 text-accent dark:text-blue-400 rounded px-1.5 py-0.5 text-sm font-mono;
+  }
+
+  .prose-article strong {
+    @apply font-semibold text-ink dark:text-gray-100;
+  }
+
+  .prose-article a {
+    @apply text-accent dark:text-blue-400 underline underline-offset-2 hover:text-accent-hover transition-colors;
+  }
+
+  .prose-article figure {
+    @apply my-8;
+  }
+
+  .prose-article img {
+    @apply w-full h-auto max-w-full rounded-lg;
+  }
+
+  .prose-article figcaption {
+    @apply text-sm text-subtle dark:text-gray-500 text-center mt-3 italic;
+  }
+}
