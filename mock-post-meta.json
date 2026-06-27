@@ -1,0 +1,27 @@
+{
+  "slug": "lorem-ipsum-dolor-sit-amet",
+  "title": "Lorem Ipsum Dolor Sit Amet Consectetur",
+  "subtitle": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+  "author": {
+    "name": "Tuan (Travis) Le",
+    "role": "Front-end Developer",
+    "avatar": "avatar.png",
+    "bio": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam."
+  },
+  "publishedAt": "June 27, 2026",
+  "readingTime": 8,
+  "coverImage": "https://picsum.photos/seed/signals/1200/600",
+  "coverAlt": "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+  "tags": ["Lorem", "Ipsum", "Dolor", "Sit", "Amet"],
+  "toc": [
+    { "id": "lorem-ipsum-dolor-sit-amet", "level": 2, "label": "Lorem Ipsum Dolor Sit Amet" },
+    { "id": "consectetur-adipiscing-elit", "level": 2, "label": "Consectetur Adipiscing Elit" },
+    { "id": "sed-do-eiusmod-tempor", "level": 3, "label": "Sed Do Eiusmod Tempor" },
+    { "id": "ut-labore-et-dolore", "level": 3, "label": "Ut Labore Et Dolore" },
+    { "id": "magna-aliqua", "level": 3, "label": "Magna Aliqua" },
+    { "id": "quis-nostrud-exercitation", "level": 2, "label": "Quis Nostrud Exercitation" },
+    { "id": "ullamco-laboris-nisi", "level": 2, "label": "Ullamco Laboris Nisi" },
+    { "id": "duis-aute-irure-dolor", "level": 2, "label": "Duis Aute Irure Dolor" },
+    { "id": "excepteur-sint-occaecat", "level": 2, "label": "Excepteur Sint Occaecat" }
+  ]
+}
