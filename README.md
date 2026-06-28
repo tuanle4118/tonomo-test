@@ -1,4 +1,4 @@
-# The Signal — Blog Editorial Layout
+# Blog Editorial Layout
 
 A responsive blog post layout built as a technical test, featuring a sticky sidebar, dark mode, scroll-synced table of contents, and full accessibility support.
 

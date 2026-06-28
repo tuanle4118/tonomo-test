@@ -76,6 +76,6 @@ export class ArticleComponent {
   readonly headingIds = computed(() => this.post().toc.map((e) => e.id));
 
   readonly postContent = computed(() =>
-    this.sanitizer.bypassSecurityTrustHtml(this.blog.post().content),
+    this.sanitizer.bypassSecurityTrustHtml(this.post().content),
   );
 }

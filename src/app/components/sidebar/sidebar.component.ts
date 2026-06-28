@@ -84,10 +84,9 @@ import { MockDataService } from '../../services/mock-data.service';
 export class SidebarComponent {
   private readonly blog = inject(MockDataService);
   readonly post = this.blog.post;
-  readonly activeId = this.blog.activeHeadingId;
 
   readonly tocClasses = computed(() => {
-    const activeId = this.activeId();
+    const activeId = this.blog.activeHeadingId();
     const map = new Map<string, string>();
 
     for (const entry of this.post().toc) {
@@ -104,11 +103,6 @@ export class SidebarComponent {
   });
 
   scrollTo(id: string): void {
-    const el = document.getElementById(id);
-    if (el) {
-      const offset = 80;
-      const top = el.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }

@@ -9,17 +9,11 @@ import { BlogServiceModel } from '../models/blog-service.model';
 export class MockDataService extends BlogServiceModel {
   private readonly http = inject(HttpClient);
 
-  private getPostMetaData() {
-    return this.http.get<PostMeta>('mock-post-meta.json');
-  }
-  private getContentData() {
-    return this.http.get('mock-blog-article.html', { responseType: 'text' });
-  }
-
   override readonly post = toSignal(
-    combineLatest([this.getPostMetaData(), this.getContentData()]).pipe(
-      map(([postMeta, content]) => ({ ...postMeta, content })),
-    ),
+    combineLatest([
+      this.http.get<PostMeta>('mock-post-meta.json'),
+      this.http.get('mock-blog-article.html', { responseType: 'text' }),
+    ]).pipe(map(([postMeta, content]) => ({ ...postMeta, content }))),
     { initialValue: {} as BlogPost },
   );
 
